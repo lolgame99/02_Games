@@ -1,3 +1,4 @@
+//test
 package at.mab.mygames.ClassGame;
 
 import org.newdawn.slick.GameContainer;
@@ -31,7 +32,6 @@ public class SoldierActor {
 	}
 	
 	public SoldierHitbox getSoldHitbox() {
-		// TODO Auto-generated method stub
 		return this.hitbox;
 	}
 }

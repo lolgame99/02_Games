@@ -9,9 +9,9 @@ public class SoldierHitbox {
 	private Rectangle hitbox;
 	
 	public SoldierHitbox(int x, int y) {
-		this.x = x;
+		this.x = x + 12;
 		this.y = y;
-		this.hitbox = new Rectangle(this.x, this.y, 55, 60);
+		this.hitbox = new Rectangle(this.x, this.y, 44, 60);
 	}
 	
 	public void setX(int x) {
@@ -24,7 +24,6 @@ public class SoldierHitbox {
 	}
 
 	public Rectangle getRectangle() {
-		// TODO Auto-generated method stub
 		return this.hitbox;
 	}
 	

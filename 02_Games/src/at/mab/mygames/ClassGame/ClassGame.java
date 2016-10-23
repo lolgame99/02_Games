@@ -1,5 +1,4 @@
-/* Github Testing Fetch - AND AGAIN - AND AGIAN - FUCK THIS*/
-//But Why
+
 package at.mab.mygames.ClassGame;
 
 import java.util.ArrayList;
@@ -7,6 +6,7 @@ import java.util.Random;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
@@ -19,10 +19,10 @@ public class ClassGame extends BasicGame {
 	private Rectangle tankHitbox;
 	private ArrayList<SoldierActor> soldiers;
 	private Image background;
-	private boolean collides;
 	private ArrayList<Rectangle> soldHitboxes;
 	private Random rand;
 	private Rectangle soldierTest;
+	//private Collision collision;
 
 	public ClassGame() {
 		super("ClassGame");
@@ -30,12 +30,15 @@ public class ClassGame extends BasicGame {
 
 	@Override
 	public void render(GameContainer gc, Graphics g) throws SlickException {
-		g.drawImage(this.background, 0, 0);
+		this.background.draw(0, 0);
 		this.tank.render(g);
 		
+		//this.collision.render(g);
 		for (SoldierActor sold : this.soldiers) {
 			sold.render(g);
 		}
+		
+
 
 	}
 
@@ -47,6 +50,7 @@ public class ClassGame extends BasicGame {
 
 		this.soldiers = new ArrayList<SoldierActor>();
 		this.soldHitboxes = new ArrayList<Rectangle>();
+		//this.collision = new Collision(false);
 
 		//this.soldiers.add(new SoldierActor(100, 100));
 		this.tankHitbox = tank.getTankHitbox().getRectangle();
@@ -72,19 +76,25 @@ public class ClassGame extends BasicGame {
 	@Override
 	public void update(GameContainer gc, int millisSinceLastCall) throws SlickException {
 		gc.setVSync(true);
+		//this.collision.update(millisSinceLastCall, gc);
 		this.tank.move(millisSinceLastCall, gc);
 		for (SoldierActor sold : this.soldiers) {
 			sold.move(millisSinceLastCall);
 		}
 
 		// Collision detection
-
 		for (Rectangle rec : soldHitboxes) {
-			this.collides = tankHitbox.intersects(rec);
-			if (collides == true) {
-				System.out.println("COLLISION");
-			} 
+			boolean collides;
+			collides = tankHitbox.intersects(rec);
+			if (collides) {
+				//this.collision.setCollision(collides);
+				System.out.println("collision");
+			}
+			else {
+				//this.collision.setCollision(collides);
+			}
 		}
+		
 		
 		
 	}
