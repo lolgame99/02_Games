@@ -1,4 +1,4 @@
-/* Github Testing Fetch - AND AGAIN - AND AGIAN - */
+/* Github Testing Fetch - AND AGAIN - AND AGIAN - FUCK THIS*/
 package at.mab.mygames.ClassGame;
 
 import java.util.ArrayList;
