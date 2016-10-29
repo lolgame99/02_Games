@@ -2,6 +2,7 @@ package at.mab.mygames.FirstGame;
 
 
 
+import org.newdawn.slick.Animation;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
@@ -9,7 +10,9 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.tests.ParticleTest;
+import org.newdawn.slick.tools.packulike.Sprite;
 
 
 public class FirstGame extends BasicGame{
@@ -21,6 +24,8 @@ public class FirstGame extends BasicGame{
 	private int directionCircle; // 0 = recht, 1= links
 	private int ovalX, ovalY;
 	//Image geisi; 
+	private Animation animation;
+	private SpriteSheet sheet;
 	
 	
 	
@@ -30,15 +35,15 @@ public class FirstGame extends BasicGame{
 
 	@Override
 	public void render(GameContainer gc, Graphics g) throws SlickException {
-		g.setColor(new Color(0,112,0));
+		/*g.setColor(new Color(0,112,0));
 		g.fillRect(this.rectX, this.rectY, 100, 100);
 		g.setColor(new Color(100,100,255));
 		g.fillOval(this.circleX, this.circleY, 100, 100);
 		g.setColor(new Color(255,100,0));
 		g.fillOval(this.ovalX, this.ovalY, 30, 150);
-		
+		*/
 		//g.drawImage(geisi, rectX, rectY);
-		
+		this.animation.draw(200, 200, 16*5, 32*5);
 		
 	}
 
@@ -58,6 +63,13 @@ public class FirstGame extends BasicGame{
 		this.ovalX=250;
 		this.ovalY=-150;
 		//geisi = new Image("C:/Users/bmaye/Desktop/geisi.png");
+		
+		gc.setVSync(true);
+		this.sheet = new SpriteSheet("C:/Users/bmaye/Dropbox/Team-Ordner „FunGroup.Inc“/Graphiken/Player/Character_walking.png", 16, 32);
+		this.animation = new Animation();
+		for (int i=0;i<5;i++) {
+			animation.addFrame(sheet.getSprite(i,0), 150);
+		}
 		
 	}
 
