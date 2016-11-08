@@ -67,7 +67,7 @@ public class FirstGame extends BasicGame{
 		gc.setVSync(true);
 		this.sheet = new SpriteSheet("C:/Users/bmaye/Dropbox/Team-Ordner „FunGroup.Inc“/Graphiken/Player/Character_walking.png", 16, 32);
 		this.animation = new Animation();
-		for (int i=0;i<5;i++) {
+		for (int i=0;i<7;i++) {
 			animation.addFrame(sheet.getSprite(i,0), 150);
 		}
 		

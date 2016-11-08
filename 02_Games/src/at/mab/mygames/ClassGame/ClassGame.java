@@ -1,5 +1,3 @@
-/* Github Testing Fetch - AND AGAIN - AND AGIAN - FUCK THIS*/
-//lol
 package at.mab.mygames.ClassGame;
 
 import java.util.ArrayList;
@@ -22,7 +20,6 @@ public class ClassGame extends BasicGame {
 	private boolean collides;
 	private ArrayList<Rectangle> soldHitboxes;
 	private Random rand;
-	private Rectangle soldierTest;
 
 	public ClassGame() {
 		super("ClassGame");
@@ -83,6 +80,7 @@ public class ClassGame extends BasicGame {
 			this.collides = tankHitbox.intersects(rec);
 			if (collides == true) {
 				System.out.println("COLLISION");
+				
 			} 
 		}
 		
