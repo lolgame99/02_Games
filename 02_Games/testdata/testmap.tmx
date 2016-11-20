@@ -1,24 +1,72 @@
-<?xml version="1.0"?>
-<map version="0.99b" orientation="orthogonal" width="40" height="50" tilewidth="32" tileheight="32">
- <properties>
-  <property name="name" value="Dungeon of Doom"/>
-  <property name="secretDoors" value="3"/>
- </properties>
- <tileset name="Dungeon" firstgid="1" tilewidth="32" tileheight="32">
-  <image source="dungeontiles.gif"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="18" tilewidth="64" tileheight="64" nextobjectid="1">
+ <tileset firstgid="1" name="dungeonTiles" tilewidth="64" tileheight="64" tilecount="25" columns="5">
+  <image source="dungeonTiles.png" width="320" height="320"/>
+  <tile id="0">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="16" probability="0.1"/>
+  <tile id="17" probability="0.2"/>
+  <tile id="20" probability="0.4"/>
+  <tile id="21" probability="0.05"/>
+  <tile id="22" probability="0.2"/>
+  <tile id="23" probability="0.05"/>
+  <tile id="24">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
  </tileset>
- <layer name="Layer 0" width="40" height="50">
-  <properties>
-   <property name="monsters" value="harmless"/>
-   <property name="sparks" value="true"/>
-  </properties>
+ <layer name="Kachelebene 1" width="32" height="18">
   <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAO3VQQqAIBCFYS/juo2LbhF4/8OIUCCiMxJTDfF/8IhC8GlGIQA+xSZ7d+9B7XEMQr81f+oXlVj16TPrV7M1c8/GZuN+ozmkaGuxPA93+9Vrct7vrf3LZ7Re1zitn/X5k5Imz/tz+NT3K/Veec9f0fbG0z8ZAAAAAAAAAKwUdcIf0EAfAAA=
-  </data>
- </layer>
- <layer name="Ebene 1" width="40" height="50">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAAO3BAQEAAACAkP6v7ggKAAAAAAAAABhk6EtKQB8AAA==
+   H4sIAAAAAAAAC52W226EMAxETbe3Lb0kkYLY///RBglL0xMTdvtghYDt8Ti2w8XMnk7k7Q6d/9g8N5mapCbLvtYmRdYkOnVfVYrob/tVbCr8JfiZxDf9u+2y62TgVuh7/I7lfkd2xKdexF8xi/WxV8HP1vPSmBxf81Tg57PJ3OQbGNHqojYaY7GY/4o8ZfvLz2Nc8b3ivdv4mSV8Y95G+de8TtZz0GfW1zLwWwJ830exJutr9AdYBe+jmHXV/F/tvE/fsZ8t7vN5YBPJR5An5tb3euZfknevn3V/X2CTwd995oPzz9bX81H9eA51zznAntXejvAj7AwMnqHzYe4WiYe1pfzZ89vzTeSoLzhntB6jOUZuyp/fFN+5KD/tIfpnLpLYZzs+f83bGX+doR4j7w/eY1Ff3zPbj+a44t8CHd6JrGGd/6xfzvbVel4V+MxXdD/pOWy2r/b4v8VoNj0iL01+AczspEUACQAA
   </data>
  </layer>
 </map>

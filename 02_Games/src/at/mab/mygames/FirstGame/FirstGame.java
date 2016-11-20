@@ -2,6 +2,7 @@ package at.mab.mygames.FirstGame;
 
 
 
+import org.newdawn.slick.Animation;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.Color;
@@ -9,7 +10,9 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.SpriteSheet;
 import org.newdawn.slick.tests.ParticleTest;
+import org.newdawn.slick.tools.packulike.Sprite;
 
 
 public class FirstGame extends BasicGame{
@@ -21,6 +24,8 @@ public class FirstGame extends BasicGame{
 	private int directionCircle; // 0 = recht, 1= links
 	private int ovalX, ovalY;
 	//Image geisi; 
+	private SpriteSheet sheet;
+	private Animation animation;
 	
 	
 	
@@ -30,15 +35,15 @@ public class FirstGame extends BasicGame{
 
 	@Override
 	public void render(GameContainer gc, Graphics g) throws SlickException {
-		g.setColor(new Color(0,112,0));
+		/*g.setColor(new Color(0,112,0));
 		g.fillRect(this.rectX, this.rectY, 100, 100);
 		g.setColor(new Color(100,100,255));
 		g.fillOval(this.circleX, this.circleY, 100, 100);
 		g.setColor(new Color(255,100,0));
 		g.fillOval(this.ovalX, this.ovalY, 30, 150);
-		
+		*/
 		//g.drawImage(geisi, rectX, rectY);
-		
+		animation.draw(200, 200,16*6,32*6);
 		
 	}
 
@@ -59,6 +64,12 @@ public class FirstGame extends BasicGame{
 		this.ovalY=-150;
 		//geisi = new Image("C:/Users/bmaye/Desktop/geisi.png");
 		
+		//this.sheet = new SpriteSheet("C:/Users/Benjamin/Dropbox/Team-Ordner „FunGroup.Inc“/Graphiken/Player/Character_walking2.png", 16, 32);
+		this.animation = new Animation();
+		for (int i=0;i<7;i++) {
+			animation.addFrame(sheet.getSprite(i,0), 150);
+		}
+		
 	}
 
 	@Override
@@ -74,7 +85,7 @@ public class FirstGame extends BasicGame{
 		}
 		if (this.directionRect==1) {
 			this.rectY++;
-			if (this.rectY==500) { //normal 500 , f�r geisi this.gcHeight-this.geisi.getHeight()
+			if (this.rectY==500) { //normal 500 , f�r geisi this.gcHeight-this.geisi.getHeight()
 				this.directionRect=2;
 			}
 		}

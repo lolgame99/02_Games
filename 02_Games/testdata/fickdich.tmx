@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="80" height="45" tilewidth="64" tileheight="64" nextobjectid="1">
+ <tileset firstgid="1" name="dungeon" tilewidth="64" tileheight="64" tilecount="25" columns="5">
+  <image source="dungeonTiles.png" width="320" height="320"/>
+  <tile id="0">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="2">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="3">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="6">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="7">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="8">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="9">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="24">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Kachelebene 1" width="80" height="45">
+  <data encoding="base64" compression="gzip">
+   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
+  </data>
+ </layer>
+ <layer name="Meta" width="80" height="45">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3BAQ0AAADCoPdPbQ8HFAAAAAAAAAAAAAAAAADwZkvEChtAOAAA
+  </data>
+ </layer>
+</map>
