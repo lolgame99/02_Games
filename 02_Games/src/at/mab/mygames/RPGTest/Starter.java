@@ -55,51 +55,67 @@ public class Starter extends BasicGame{
 		
 		g.draw(hitbox);
 		
-		if (this.direction=="u"&!gc.getInput().isKeyDown(Input.KEY_W)) {
+		if (this.direction=="u"&!gc.getInput().isKeyDown(Input.KEY_UP)) {
 			this.move.draw(768, 418, 832, 482, 0, 0, 64, 64);
 		}
 		
-		if (this.direction=="d"&!gc.getInput().isKeyDown(Input.KEY_S)) {
+		if (this.direction=="d"&!gc.getInput().isKeyDown(Input.KEY_DOWN)) {
 			this.move.draw(768, 418, 832, 482, 0, 128, 64, 192);
 		}
 		
-		if (this.direction=="l"&!gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (this.direction=="l"&!gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.move.draw(768, 418, 832, 482, 0, 64, 64, 128);
 		}
 		
-		if (this.direction=="r"&!gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (this.direction=="r"&!gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.move.draw(768, 418, 832, 482, 0, 192, 64, 256);
 		}
 		
-		if (this.direction=="u"&&gc.getInput().isKeyDown(Input.KEY_W)) {
+		if (this.direction=="ur"&!gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
+			this.move.draw(768, 418, 832, 482, 0, 192, 64, 256);
+		}
+		
+		if (this.direction=="dr"&!gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
+			this.move.draw(768, 418, 832, 482, 0, 192, 64, 256);
+		}
+		
+		if (this.direction=="ul"&!gc.getInput().isKeyDown(Input.KEY_LEFT)) {
+			this.move.draw(768, 418, 832, 482, 0, 64, 64, 128);
+		}
+		
+		if (this.direction=="dl"&!gc.getInput().isKeyDown(Input.KEY_LEFT)) {
+			this.move.draw(768, 418, 832, 482, 0, 64, 64, 128);
+		}
+		
+		if (this.direction=="u"&&gc.getInput().isKeyDown(Input.KEY_UP)) {
 			this.moveUpA.draw(768, 418);
 		}
 		
-		if (this.direction=="d"&&gc.getInput().isKeyDown(Input.KEY_S)) {
+		if (this.direction=="d"&&gc.getInput().isKeyDown(Input.KEY_DOWN)) {
 			this.moveDownA.draw(768, 418);
 		}
 		
-		if (this.direction=="l"&&gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (this.direction=="l"&&gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.moveLeftA.draw(768, 418);
 		}
 		
-		if (this.direction=="r"&&gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (this.direction=="r"&&gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.moveRightA.draw(768, 418);
 		}
 		
-		if (this.direction=="ur"&&gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (this.direction=="ur"&&gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.moveRightA.draw(768, 418);
 		}
 		
-		if (this.direction=="dr"&&gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (this.direction=="dr"&&gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.moveRightA.draw(768, 418);
 		}
 		
-		if (this.direction=="ul"&&gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (this.direction=="ul"&&gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.moveLeftA.draw(768, 418);
 		}
 		
-		if (this.direction=="dl"&&gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (this.direction=="dl"&&gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.moveLeftA.draw(768, 418);
 		}
 	}
@@ -150,37 +166,43 @@ public class Starter extends BasicGame{
 		    }
 		}
 	}
-
+	
+	public void keyPressed(int key, char c) {
+		if (key==89) {
+			System.out.println("HALLO");
+		}
+	}
+	
 	private void controlMovement(GameContainer gc, int delta) {
-		if (gc.getInput().isKeyDown(Input.KEY_W)) {
+		if (gc.getInput().isKeyDown(Input.KEY_UP)) {
 			moveUp(delta);
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_S)) {
+		if (gc.getInput().isKeyDown(Input.KEY_DOWN)) {
 			moveDown(delta);
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			moveLeft(delta);
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			moveRight(delta);
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_W)&&gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (gc.getInput().isKeyDown(Input.KEY_W)&&gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.direction="ul";
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_W)&&gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (gc.getInput().isKeyDown(Input.KEY_W)&&gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.direction="ur";
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_S)&&gc.getInput().isKeyDown(Input.KEY_A)) {
+		if (gc.getInput().isKeyDown(Input.KEY_S)&&gc.getInput().isKeyDown(Input.KEY_LEFT)) {
 			this.direction="dl";
 		}
 		
-		if (gc.getInput().isKeyDown(Input.KEY_S)&&gc.getInput().isKeyDown(Input.KEY_D)) {
+		if (gc.getInput().isKeyDown(Input.KEY_S)&&gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
 			this.direction="dr";
 		}
 		
